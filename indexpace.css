@@ -1,0 +1,63 @@
+html {
+    background-color: white;
+}
+
+div.main-body {
+    display: grid;
+    grid-template-columns: minmax (200px, auto, ) 1fr;
+    grid-template-areas: "navbar main-doc";
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+#welcome-section {
+    max-width: 100%;
+    height: 100vh;
+    display: block;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+#navbar {
+    position: fixed;
+    grid-area: navbar;
+}
+
+#navbar a {
+    display: block;
+    border: 1px solid black;
+    top: 0px;
+    left: 0px;
+    padding: 5px;
+    margin: 10px 0;
+    color: green;
+}
+
+#main-doc {
+    grid-area: main;
+}
+
+header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+code {
+    background-color: gray;
+    display: block;
+    padding: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    div.main-body {
+        grid-template-columns: 1fr;
+        grid-template-areas: "navbar" "main-doc";
+    }
+}
